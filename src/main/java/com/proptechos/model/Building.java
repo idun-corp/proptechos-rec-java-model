@@ -5,9 +5,9 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.proptechos.model.common.IForeignSystemObject;
 import com.proptechos.model.common.IRealEstateComponent;
-import com.proptechos.util.InstantDateDeserializer;
-import com.proptechos.util.InstantDateSerializer;
-import java.util.Date;
+import com.proptechos.util.InstantDeserializer;
+import com.proptechos.util.InstantSerializer;
+import java.time.Instant;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
@@ -21,14 +21,14 @@ public class Building implements IForeignSystemObject, IRealEstateComponent {
   private String recClass;
 
   @JsonProperty("createdTime")
-  @JsonSerialize(using = InstantDateSerializer.class)
-  @JsonDeserialize(using = InstantDateDeserializer.class)
-  private Date created;
+  @JsonSerialize(using = InstantSerializer.class)
+  @JsonDeserialize(using = InstantDeserializer.class)
+  private Instant created;
 
   @JsonProperty("updatedTime")
-  @JsonSerialize(using = InstantDateSerializer.class)
-  @JsonDeserialize(using = InstantDateDeserializer.class)
-  private Date updated;
+  @JsonSerialize(using = InstantSerializer.class)
+  @JsonDeserialize(using = InstantDeserializer.class)
+  private Instant updated;
 
   @JsonProperty("hasAlias")
   private List<Alias> hasAliases;
@@ -67,19 +67,19 @@ public class Building implements IForeignSystemObject, IRealEstateComponent {
     this.recClass = recClass;
   }
 
-  public Date getCreated() {
+  public Instant getCreated() {
     return created;
   }
 
-  public void setCreated(Date created) {
+  public void setCreated(Instant created) {
     this.created = created;
   }
 
-  public Date getUpdated() {
+  public Instant getUpdated() {
     return updated;
   }
 
-  public void setUpdated(Date updated) {
+  public void setUpdated(Instant updated) {
     this.updated = updated;
   }
 

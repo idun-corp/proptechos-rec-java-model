@@ -9,7 +9,7 @@ public class Alias {
   private String id;
 
   @JsonProperty("isMemberOfAliasNamespace")
-  private UUID aliasIdNamespace;
+  private UUID aliasNamespace;
 
   public String getId() {
     return id;
@@ -19,11 +19,11 @@ public class Alias {
     this.id = id;
   }
 
-  public UUID getAliasIdNamespace() {
-    return aliasIdNamespace;
+  public UUID getAliasNamespace() {
+    return aliasNamespace;
   }
 
-  public void setAliasIdNamespace(UUID aliasIdNamespace) {
-    this.aliasIdNamespace = aliasIdNamespace;
+  public void setAliasNamespace(UUID aliasNamespace) {
+    this.aliasNamespace = aliasNamespace;
   }
 }

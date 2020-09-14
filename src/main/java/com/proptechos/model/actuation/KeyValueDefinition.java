@@ -1,8 +1,5 @@
-package com.proptechos.model;
+package com.proptechos.model.actuation;
 
-
-import com.proptechos.model.actuation.DataType;
-import com.proptechos.model.actuation.ValueRestriction;
 
 public class KeyValueDefinition {
 
