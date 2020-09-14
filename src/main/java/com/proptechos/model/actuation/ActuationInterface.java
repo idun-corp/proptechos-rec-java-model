@@ -3,11 +3,10 @@ package com.proptechos.model.actuation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.proptechos.model.KeyValueDefinition;
 import com.proptechos.model.common.IRecClass;
-import com.proptechos.util.InstantDateDeserializer;
-import com.proptechos.util.InstantDateSerializer;
-import java.util.Date;
+import com.proptechos.util.InstantDeserializer;
+import com.proptechos.util.InstantSerializer;
+import java.time.Instant;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -20,14 +19,14 @@ public class ActuationInterface implements IRecClass {
   private String recClass;
 
   @JsonProperty("createdTime")
-  @JsonSerialize(using = InstantDateSerializer.class)
-  @JsonDeserialize(using = InstantDateDeserializer.class)
-  private Date created;
+  @JsonSerialize(using = InstantSerializer.class)
+  @JsonDeserialize(using = InstantDeserializer.class)
+  private Instant created;
 
   @JsonProperty("updatedTime")
-  @JsonSerialize(using = InstantDateSerializer.class)
-  @JsonDeserialize(using = InstantDateDeserializer.class)
-  private Date updated;
+  @JsonSerialize(using = InstantSerializer.class)
+  @JsonDeserialize(using = InstantDeserializer.class)
+  private Instant updated;
 
   @JsonProperty("comment")
   private HashMap<String, String> comment;
@@ -60,19 +59,19 @@ public class ActuationInterface implements IRecClass {
     this.recClass = recClass;
   }
 
-  public Date getCreated() {
+  public Instant getCreated() {
     return created;
   }
 
-  public void setCreated(Date created) {
+  public void setCreated(Instant created) {
     this.created = created;
   }
 
-  public Date getUpdated() {
+  public Instant getUpdated() {
     return updated;
   }
 
-  public void setUpdated(Date updated) {
+  public void setUpdated(Instant updated) {
     this.updated = updated;
   }
 

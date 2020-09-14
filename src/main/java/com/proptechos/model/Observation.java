@@ -2,13 +2,11 @@ package com.proptechos.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.proptechos.util.InstantDateDeserializer;
-import com.proptechos.util.InstantDateSerializer;
 import com.proptechos.util.InstantDeserializer;
 import com.proptechos.util.InstantSerializer;
 import java.time.Instant;
 
-public class ObservationDto {
+public class Observation {
 
   @JsonSerialize(using = InstantSerializer.class)
   @JsonDeserialize(using = InstantDeserializer.class)

@@ -5,9 +5,9 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.proptechos.model.common.IForeignSystemObject;
 import com.proptechos.model.common.IRecClass;
-import com.proptechos.util.InstantDateDeserializer;
-import com.proptechos.util.InstantDateSerializer;
-import java.util.Date;
+import com.proptechos.util.InstantDeserializer;
+import com.proptechos.util.InstantSerializer;
+import java.time.Instant;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
@@ -21,14 +21,14 @@ public class RealEstate  implements IForeignSystemObject, IRecClass {
   private String recClass;
 
   @JsonProperty("createdTime")
-  @JsonSerialize(using = InstantDateSerializer.class)
-  @JsonDeserialize(using = InstantDateDeserializer.class)
-  private Date created;
+  @JsonSerialize(using = InstantSerializer.class)
+  @JsonDeserialize(using = InstantDeserializer.class)
+  private Instant created;
 
   @JsonProperty("updatedTime")
-  @JsonSerialize(using = InstantDateSerializer.class)
-  @JsonDeserialize(using = InstantDateDeserializer.class)
-  private Date updated;
+  @JsonSerialize(using = InstantSerializer.class)
+  @JsonDeserialize(using = InstantDeserializer.class)
+  private Instant updated;
 
   @JsonProperty("hasAlias")
   private List<Alias> hasAliases;
@@ -48,92 +48,74 @@ public class RealEstate  implements IForeignSystemObject, IRecClass {
   @JsonProperty("hasGeoReferenceOrigo")
   private String geoReferenceOrigo;
 
-  @Override
   public UUID getId() {
     return id;
   }
 
-  @Override
   public void setId(UUID id) {
     this.id = id;
   }
 
-  @Override
   public String getRecClass() {
     return recClass;
   }
 
-  @Override
   public void setRecClass(String recClass) {
     this.recClass = recClass;
   }
 
-  @Override
-  public Date getCreated() {
+  public Instant getCreated() {
     return created;
   }
 
-  @Override
-  public void setCreated(Date created) {
+  public void setCreated(Instant created) {
     this.created = created;
   }
 
-  @Override
-  public Date getUpdated() {
+  public Instant getUpdated() {
     return updated;
   }
 
-  @Override
-  public void setUpdated(Date updated) {
+  public void setUpdated(Instant updated) {
     this.updated = updated;
   }
 
-  @Override
   public List<Alias> getHasAliases() {
     return hasAliases;
   }
 
-  @Override
   public void setHasAliases(List<Alias> hasAliases) {
     this.hasAliases = hasAliases;
   }
 
-  @Override
   public HashMap<String, String> getComment() {
     return comment;
   }
 
-  @Override
   public void setComment(HashMap<String, String> comment) {
     this.comment = comment;
   }
 
-  @Override
   public String getLittera() {
     return littera;
   }
 
-  @Override
   public void setLittera(String littera) {
     this.littera = littera;
   }
 
-  @Override
   public String getPopularName() {
     return popularName;
   }
 
-  @Override
   public void setPopularName(String popularName) {
     this.popularName = popularName;
   }
 
-  @Override
   public HashMap<String, String> getSource() {
     return source;
   }
 
-  @Override
   public void setSource(HashMap<String, String> source) {
     this.source = source;
   }

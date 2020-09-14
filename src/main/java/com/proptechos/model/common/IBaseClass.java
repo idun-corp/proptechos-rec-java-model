@@ -1,5 +1,6 @@
 package com.proptechos.model.common;
 
+import java.time.Instant;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.UUID;
@@ -14,13 +15,13 @@ public interface IBaseClass {
 
   String getRecClass();
 
-  void setCreated(Date created);
+  void setCreated(Instant created);
 
-  Date getCreated();
+  Instant getCreated();
 
-  void setUpdated(Date updated);
+  void setUpdated(Instant updated);
 
-  Date getUpdated();
+  Instant getUpdated();
 
   void setPopularName(String popularName);
 

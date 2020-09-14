@@ -25,18 +25,12 @@ public class InstantDeserializer extends JsonDeserializer<Instant> {
       throws IOException {
     ObjectCodec oc = jsonParser.getCodec();
     JsonNode node = oc.readTree(jsonParser);
-    if (node.get("$numberLong") != null) {
-      long dateAsInstant = node.get("$numberLong").asLong();
-      return dateAsInstant > 0 ? Instant.ofEpochMilli(dateAsInstant) : null;
-    } else {
-      String dateAsString = node.asText();
-
-      try {
-        return formatter.parse(dateAsString).toInstant();
-      } catch (ParseException e) {
-        log.log(Level.WARNING, "Couldn't parse date: " + dateAsString);
-        return null;
-      }
+    String dateAsString = node.asText();
+    try {
+      return formatter.parse(dateAsString).toInstant();
+    } catch (ParseException e) {
+      log.log(Level.WARNING, "Couldn't parse date: " + dateAsString);
+      return null;
     }
   }
 }
