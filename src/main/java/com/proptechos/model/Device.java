@@ -1,5 +1,7 @@
 package com.proptechos.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -16,6 +18,7 @@ public class Device implements IDevice {
   @JsonProperty("id")
   private UUID id;
 
+  @JsonInclude(Include.NON_NULL)
   @JsonProperty("class")
   private String recClass;
 
