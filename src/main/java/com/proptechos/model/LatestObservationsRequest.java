@@ -1,4 +1,4 @@
-package com.proptechos.model.actuation;
+package com.proptechos.model;
 
 import java.util.List;
 
