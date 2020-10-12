@@ -32,7 +32,7 @@
     <repository>
       <id>github</id>
       <name>GitHub IDUN Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/idun-corp/neo4j-ogm</url>
+      <url>https://maven.pkg.github.com/idun-corp/proptechos-rec-java-model</url>
     </repository>
   </distributionManagement>
 
