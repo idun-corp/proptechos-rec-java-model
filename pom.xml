@@ -6,12 +6,19 @@
 
   <groupId>com.proptechos</groupId>
   <artifactId>rec-model</artifactId>
-  <version>3.1.3</version>
+  <version>3.1.3-SNAPSHOT</version>
   <description>
     ProptechOS pojo classes used for building
     requests and responses to ProptechOS API implementing
     RealEstateCore Specification version 3.1.3
   </description>
+
+  <properties>
+    <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
+    <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
+    <maven-javadoc-plugin.version>3.0.1</maven-javadoc-plugin.version>
+    <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -20,6 +27,14 @@
       <version>2.9.8</version>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub IDUN Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/idun-corp/neo4j-ogm</url>
+    </repository>
+  </distributionManagement>
 
   <build>
     <plugins>
@@ -30,6 +45,56 @@
           <source>8</source>
           <target>8</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>${maven-source-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${maven-javadoc-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+        <!--
+        Check for some javadoc issues, but not for all missing @param and @return etc..
+        See http://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html#BEJEFABE
+        -->
+        <configuration>
+          <doclint>syntax</doclint>
+          <doclint>html</doclint>
+          <tags>
+            <tag>
+              <name>soundtrack</name>
+              <placement>X</placement>
+            </tag>
+          </tags>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>${maven-install-plugin.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0-M1</version>
       </plugin>
     </plugins>
   </build>
