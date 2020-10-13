@@ -30,9 +30,9 @@
 
   <distributionManagement>
     <repository>
-      <id>github</id>
-      <name>GitHub IDUN Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/idun-corp/proptechos-rec-java-model</url>
+      <id>snapshots</id>
+      <name>libs-snapshot</name>
+      <url>https://idunrealestate.jfrog.io/artifactory/libs-snapshot</url>
     </repository>
   </distributionManagement>
 
