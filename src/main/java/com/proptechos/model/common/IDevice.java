@@ -39,9 +39,9 @@ public interface IDevice extends IForeignSystemObject, IRecClass {
 
   List<UUID> getHasSubDevices();
 
-  void setIsServedByDevice(UUID id);
+  void setServedBy(UUID id);
 
-  UUID getIsServedByDevice();
+  UUID getServedBy();
 
   void setServesDevice(UUID id);
 
