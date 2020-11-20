@@ -54,14 +54,10 @@ public class BuildingComponent implements IBuildingComponent {
   private UUID hasSuperBuildingComponent;
 
   @JsonProperty("hasSubBuildingComponent")
-  private UUID hasSubBuildingComponent;
+  private List<UUID> hasSubBuildingComponent;
 
   @JsonProperty("isLocatedAtLocalCoordinates")
   private String isLocatedAtLocalCoordinates;
-
-  @Deprecated //will be updated according to REC 3.2
-  @JsonProperty("isPartOfStorey")
-  private UUID isPartOf;
 
   public UUID getId() {
     return id;
@@ -151,11 +147,11 @@ public class BuildingComponent implements IBuildingComponent {
     this.hasSuperBuildingComponent = hasSuperBuildingComponent;
   }
 
-  public UUID getHasSubBuildingComponent() {
+  public List<UUID> getHasSubBuildingComponent() {
     return hasSubBuildingComponent;
   }
 
-  public void setHasSubBuildingComponent(UUID hasSubBuildingComponent) {
+  public void setHasSubBuildingComponent(List<UUID> hasSubBuildingComponent) {
     this.hasSubBuildingComponent = hasSubBuildingComponent;
   }
 
@@ -165,13 +161,5 @@ public class BuildingComponent implements IBuildingComponent {
 
   public void setIsLocatedAtLocalCoordinates(String isLocatedAtLocalCoordinates) {
     this.isLocatedAtLocalCoordinates = isLocatedAtLocalCoordinates;
-  }
-
-  public UUID getIsPartOf() {
-    return isPartOf;
-  }
-
-  public void setIsPartOf(UUID isPartOf) {
-    this.isPartOf = isPartOf;
   }
 }

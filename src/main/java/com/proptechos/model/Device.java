@@ -65,8 +65,8 @@ public class Device implements IDevice {
   @JsonProperty("hasSubDevices")
   private List<UUID> hasSubDevices;
 
-  @JsonProperty("isServedByDevice")
-  private UUID isServedByDevice;
+  @JsonProperty("servedBy")
+  private UUID servedBy;
 
   @JsonProperty("servesDevice")
   private UUID servesDevice;
@@ -191,12 +191,12 @@ public class Device implements IDevice {
     this.hasSubDevices = hasSubDevices;
   }
 
-  public UUID getIsServedByDevice() {
-    return isServedByDevice;
+  public UUID getServedBy() {
+    return servedBy;
   }
 
-  public void setIsServedByDevice(UUID isServedByDevice) {
-    this.isServedByDevice = isServedByDevice;
+  public void setServedBy(UUID servedBy) {
+    this.servedBy = servedBy;
   }
 
   public UUID getServesDevice() {

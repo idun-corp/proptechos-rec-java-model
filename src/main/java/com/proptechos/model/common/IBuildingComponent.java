@@ -7,6 +7,7 @@ import com.proptechos.model.BuildingComponent;
 import com.proptechos.model.Room;
 import com.proptechos.model.Storey;
 import com.proptechos.model.VirtualBuildingComponent;
+import java.util.List;
 import java.util.UUID;
 
 @JsonTypeInfo(
@@ -32,14 +33,8 @@ public interface IBuildingComponent extends IForeignSystemObject, IRecClass {
 
   UUID getHasSuperBuildingComponent();
 
-  void setHasSubBuildingComponent(UUID hasSubBuildingComponent);
+  void setHasSubBuildingComponent(List<UUID> hasSubBuildingComponent);
 
-  UUID getHasSubBuildingComponent();
-
-  @Deprecated
-  void setIsPartOf(UUID isPartOf);
-
-  @Deprecated
-  UUID getIsPartOf();
+  List<UUID> getHasSubBuildingComponent();
 
 }
