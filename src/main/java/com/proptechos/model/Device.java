@@ -62,7 +62,7 @@ public class Device implements IDevice {
   @JsonProperty("hasSuperDevice")
   private UUID hasSuperDevice;
 
-  @JsonProperty("hasSubDevices")
+  @JsonProperty("hasSubDevice")
   private List<UUID> hasSubDevices;
 
   @JsonProperty("servedBy")
