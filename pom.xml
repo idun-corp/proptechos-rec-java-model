@@ -6,7 +6,7 @@
 
   <groupId>com.proptechos</groupId>
   <artifactId>rec-model</artifactId>
-  <version>3.1.3-SNAPSHOT</version>
+  <version>3.1.3</version>
   <description>
     ProptechOS pojo classes used for building
     requests and responses to ProptechOS API implementing
@@ -29,10 +29,15 @@
   </dependencies>
 
   <distributionManagement>
-    <repository>
+    <snapshotRepository>
       <id>sdk-snapshots</id>
       <name>sdk-snapshot</name>
       <url>https://idunrealestate.jfrog.io/artifactory/sdk-snapshot</url>
+    </snapshotRepository>
+    <repository>
+      <id>sdk-releases</id>
+      <name>sdk-release</name>
+      <url>https://idunrealestate.jfrog.io/artifactory/sdk-release</url>
     </repository>
   </distributionManagement>
 
