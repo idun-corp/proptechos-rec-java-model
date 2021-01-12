@@ -1,10 +1,11 @@
-package com.proptechos.model;
+package com.proptechos.model.buildingcomponent;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.proptechos.model.Alias;
 import com.proptechos.model.common.IBuildingComponent;
 import com.proptechos.util.InstantDeserializer;
 import com.proptechos.util.InstantSerializer;

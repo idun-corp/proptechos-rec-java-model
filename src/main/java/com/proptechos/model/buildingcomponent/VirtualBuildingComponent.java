@@ -1,4 +1,4 @@
-package com.proptechos.model;
+package com.proptechos.model.buildingcomponent;
 
 import com.proptechos.model.common.IBuildingComponent;
 
