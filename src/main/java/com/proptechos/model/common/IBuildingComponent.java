@@ -3,10 +3,10 @@ package com.proptechos.model.common;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.proptechos.model.BuildingComponent;
-import com.proptechos.model.Room;
-import com.proptechos.model.Storey;
-import com.proptechos.model.VirtualBuildingComponent;
+import com.proptechos.model.buildingcomponent.BuildingComponent;
+import com.proptechos.model.buildingcomponent.Room;
+import com.proptechos.model.buildingcomponent.Storey;
+import com.proptechos.model.buildingcomponent.VirtualBuildingComponent;
 import java.util.List;
 import java.util.UUID;
 

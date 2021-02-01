@@ -6,11 +6,11 @@ In order to include library as a dependency into pom.xml
 * ProptechOS maven repository:
 ````xml
 <repositories>
-    <repository>
-      <id>ProptechOS-SDK</id>
-      <name>sdk-release</name>
-      <url>https://idunrealestate.jfrog.io/artifactory/sdk-release</url>
-    </repository>
+  <repository>
+    <id>sdk-releases</id>
+    <name>sdk-release</name>
+    <url>https://idunrealestate.jfrog.io/artifactory/sdk-release</url>
+  </repository>
 </repositories>
 ````
 * Library dependency:
@@ -18,6 +18,6 @@ In order to include library as a dependency into pom.xml
 <dependency>
     <groupId>com.proptechos</groupId>
     <artifactId>rec-model</artifactId>
-    <version>3.1.3</version>
+    <version>3.2</version>
 </dependency>
 ````
