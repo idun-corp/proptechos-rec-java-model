@@ -71,6 +71,9 @@ public class Device implements IDevice {
   @JsonProperty("servesDevice")
   private UUID servesDevice;
 
+  @JsonProperty("hostedBy")
+  private UUID hostedBy;
+
   public UUID getId() {
     return id;
   }
@@ -207,4 +210,11 @@ public class Device implements IDevice {
     this.servesDevice = servesDevice;
   }
 
+  public UUID getHostedBy() {
+    return hostedBy;
+  }
+
+  public void setHostedBy(UUID hostedBy) {
+    this.hostedBy = hostedBy;
+  }
 }

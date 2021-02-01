@@ -6,7 +6,7 @@
 
   <groupId>com.proptechos</groupId>
   <artifactId>rec-model</artifactId>
-  <version>3.2</version>
+  <version>3.2-SNAPSHOT</version>
   <description>
     ProptechOS pojo classes used for building
     requests and responses to ProptechOS API implementing
