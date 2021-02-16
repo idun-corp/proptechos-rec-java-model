@@ -23,13 +23,13 @@ public interface IDevice extends IForeignSystemObject, IRecClass {
 
   UUID getIsMountedInBuildingComponent();
 
-  void setServesBuildingComponent(UUID id);
+  void setServesBuildingComponent(List<UUID> ids);
 
-  UUID getServesBuildingComponent();
+  List<UUID> getServesBuildingComponent();
 
-  void setServesBuilding(UUID id);
+  void setServesBuilding(List<UUID> ids);
 
-  UUID getServesBuilding();
+  List<UUID> getServesBuilding();
 
   void setHasSuperDevice(UUID id);
 

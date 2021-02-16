@@ -54,10 +54,10 @@ public class Device implements IDevice {
   private UUID isMountedInBuildingComponent;
 
   @JsonProperty("servesBuildingComponent")
-  private UUID servesBuildingComponent;
+  private List<UUID> servesBuildingComponent;
 
   @JsonProperty("servesBuilding")
-  private UUID servesBuilding;
+  private List<UUID> servesBuilding;
 
   @JsonProperty("hasSuperDevice")
   private UUID hasSuperDevice;
@@ -162,19 +162,19 @@ public class Device implements IDevice {
     this.isMountedInBuildingComponent = isMountedInBuildingComponent;
   }
 
-  public UUID getServesBuildingComponent() {
+  public List<UUID> getServesBuildingComponent() {
     return servesBuildingComponent;
   }
 
-  public void setServesBuildingComponent(UUID servesBuildingComponent) {
+  public void setServesBuildingComponent(List<UUID> servesBuildingComponent) {
     this.servesBuildingComponent = servesBuildingComponent;
   }
 
-  public UUID getServesBuilding() {
+  public List<UUID> getServesBuilding() {
     return servesBuilding;
   }
 
-  public void setServesBuilding(UUID servesBuilding) {
+  public void setServesBuilding(List<UUID> servesBuilding) {
     this.servesBuilding = servesBuilding;
   }
 
