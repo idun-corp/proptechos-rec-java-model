@@ -48,7 +48,7 @@ public class Device implements IDevice {
   private HashMap<String, String> source;
 
   @JsonProperty("hasDeviceFunctionType")
-  private String hasDeviceFunctionType;
+  private List<String> hasDeviceFunctionType;
 
   @JsonProperty("isMountedInBuildingComponent")
   private UUID isMountedInBuildingComponent;
@@ -146,11 +146,11 @@ public class Device implements IDevice {
     this.source = source;
   }
 
-  public String getHasDeviceFunctionType() {
+  public List<String> getHasDeviceFunctionType() {
     return hasDeviceFunctionType;
   }
 
-  public void setHasDeviceFunctionType(String hasDeviceFunctionType) {
+  public void setHasDeviceFunctionType(List<String> hasDeviceFunctionType) {
     this.hasDeviceFunctionType = hasDeviceFunctionType;
   }
 
