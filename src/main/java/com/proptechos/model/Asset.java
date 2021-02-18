@@ -3,14 +3,16 @@ package com.proptechos.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.proptechos.model.common.IForeignSystemObject;
 import com.proptechos.model.common.IRecClass;
 import com.proptechos.util.InstantDeserializer;
 import com.proptechos.util.InstantSerializer;
 import java.time.Instant;
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
-public class Asset implements IRecClass {
+public class Asset implements IForeignSystemObject, IRecClass {
 
   @JsonProperty("id")
   private UUID id;
@@ -42,6 +44,9 @@ public class Asset implements IRecClass {
 
   @JsonProperty("locatedIn")
   private UUID locatedIn;
+
+  @JsonProperty("hasAlias")
+  private List<Alias> hasAliases;
 
   @Override
   public UUID getId() {
@@ -130,4 +135,13 @@ public class Asset implements IRecClass {
   public void setLocatedIn(UUID locatedIn) {
     this.locatedIn = locatedIn;
   }
+
+  public List<Alias> getHasAliases() {
+    return hasAliases;
+  }
+
+  public void setHasAliases(List<Alias> hasAliases) {
+    this.hasAliases = hasAliases;
+  }
+
 }

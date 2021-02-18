@@ -4,13 +4,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.proptechos.model.common.IBaseClass;
+import com.proptechos.model.common.IForeignSystemObject;
+import com.proptechos.model.common.IRecClass;
 import com.proptechos.util.InstantDeserializer;
 import com.proptechos.util.InstantSerializer;
 import java.time.Instant;
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
-public class Collection implements IBaseClass {
+public class Collection implements IForeignSystemObject, IRecClass {
 
   @JsonProperty("id")
   private UUID id;
@@ -36,6 +39,12 @@ public class Collection implements IBaseClass {
 
   @JsonProperty("source")
   private HashMap<String, String> source;
+
+  @JsonProperty("littera")
+  private String littera;
+
+  @JsonProperty("hasAlias")
+  private List<Alias> hasAliases;
 
   @Override
   public UUID getId() {
@@ -106,4 +115,21 @@ public class Collection implements IBaseClass {
   public void setSource(HashMap<String, String> source) {
     this.source = source;
   }
+
+  public String getLittera() {
+    return littera;
+  }
+
+  public void setLittera(String littera) {
+    this.littera = littera;
+  }
+
+  public List<Alias> getHasAliases() {
+    return hasAliases;
+  }
+
+  public void setHasAliases(List<Alias> hasAliases) {
+    this.hasAliases = hasAliases;
+  }
+
 }
