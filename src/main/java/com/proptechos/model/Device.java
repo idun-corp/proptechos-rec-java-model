@@ -48,16 +48,16 @@ public class Device implements IDevice {
   private HashMap<String, String> source;
 
   @JsonProperty("hasDeviceFunctionType")
-  private List<String> hasDeviceFunctionType;
+  private String hasDeviceFunctionType;
 
   @JsonProperty("isMountedInBuildingComponent")
   private UUID isMountedInBuildingComponent;
 
   @JsonProperty("servesBuildingComponent")
-  private List<UUID> servesBuildingComponent;
+  private UUID servesBuildingComponent;
 
   @JsonProperty("servesBuilding")
-  private List<UUID> servesBuilding;
+  private UUID servesBuilding;
 
   @JsonProperty("hasSuperDevice")
   private UUID hasSuperDevice;
@@ -146,11 +146,11 @@ public class Device implements IDevice {
     this.source = source;
   }
 
-  public List<String> getHasDeviceFunctionType() {
+  public String getHasDeviceFunctionType() {
     return hasDeviceFunctionType;
   }
 
-  public void setHasDeviceFunctionType(List<String> hasDeviceFunctionType) {
+  public void setHasDeviceFunctionType(String hasDeviceFunctionType) {
     this.hasDeviceFunctionType = hasDeviceFunctionType;
   }
 
@@ -162,19 +162,19 @@ public class Device implements IDevice {
     this.isMountedInBuildingComponent = isMountedInBuildingComponent;
   }
 
-  public List<UUID> getServesBuildingComponent() {
+  public UUID getServesBuildingComponent() {
     return servesBuildingComponent;
   }
 
-  public void setServesBuildingComponent(List<UUID> servesBuildingComponent) {
+  public void setServesBuildingComponent(UUID servesBuildingComponent) {
     this.servesBuildingComponent = servesBuildingComponent;
   }
 
-  public List<UUID> getServesBuilding() {
+  public UUID getServesBuilding() {
     return servesBuilding;
   }
 
-  public void setServesBuilding(List<UUID> servesBuilding) {
+  public void setServesBuilding(UUID servesBuilding) {
     this.servesBuilding = servesBuilding;
   }
 
