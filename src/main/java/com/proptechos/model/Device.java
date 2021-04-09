@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.proptechos.model.common.IDevice;
 import com.proptechos.util.InstantDeserializer;
 import com.proptechos.util.InstantSerializer;
+
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.List;
@@ -31,6 +32,12 @@ public class Device implements IDevice {
   @JsonSerialize(using = InstantSerializer.class)
   @JsonDeserialize(using = InstantDeserializer.class)
   private Instant updated;
+
+  @JsonProperty(value = "createdByAgent")
+  private String createdByAgent;
+
+  @JsonProperty(value = "updatedByAgent")
+  private String updatedByAgent;
 
   @JsonProperty("hasAlias")
   private List<Alias> hasAliases;
@@ -104,6 +111,22 @@ public class Device implements IDevice {
 
   public void setUpdated(Instant updated) {
     this.updated = updated;
+  }
+
+  public String getCreatedByAgent() {
+    return createdByAgent;
+  }
+
+  public void setCreatedByAgent(String createdByAgent) {
+    this.createdByAgent = createdByAgent;
+  }
+
+  public String getUpdatedByAgent() {
+    return updatedByAgent;
+  }
+
+  public void setUpdatedByAgent(String updatedByAgent) {
+    this.updatedByAgent = updatedByAgent;
   }
 
   public List<Alias> getHasAliases() {

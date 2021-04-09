@@ -33,6 +33,12 @@ public class Asset implements IForeignSystemObject, IRecClass {
   @JsonDeserialize(using = InstantDeserializer.class)
   private Instant updated;
 
+  @JsonProperty(value = "createdByAgent")
+  private String createdByAgent;
+
+  @JsonProperty(value = "updatedByAgent")
+  private String updatedByAgent;
+
   @JsonProperty("comment")
   private HashMap<String, String> comment;
 
@@ -48,82 +54,82 @@ public class Asset implements IForeignSystemObject, IRecClass {
   @JsonProperty("hasAlias")
   private List<Alias> hasAliases;
 
-  @Override
   public UUID getId() {
     return id;
   }
 
-  @Override
   public void setId(UUID id) {
     this.id = id;
   }
 
-  @Override
   public String getRecClass() {
     return recClass;
   }
 
-  @Override
   public void setRecClass(String recClass) {
     this.recClass = recClass;
   }
 
-  @Override
   public String getLittera() {
     return littera;
   }
 
-  @Override
   public void setLittera(String littera) {
     this.littera = littera;
   }
 
-  @Override
   public Instant getCreated() {
     return created;
   }
 
-  @Override
   public void setCreated(Instant created) {
     this.created = created;
   }
 
-  @Override
   public Instant getUpdated() {
     return updated;
   }
 
-  @Override
   public void setUpdated(Instant updated) {
     this.updated = updated;
   }
 
-  @Override
+  public String getCreatedByAgent() {
+    return createdByAgent;
+  }
+
+  public void setCreatedByAgent(String createdByAgent) {
+    this.createdByAgent = createdByAgent;
+  }
+
+  public String getUpdatedByAgent() {
+    return updatedByAgent;
+  }
+
+  public void setUpdatedByAgent(String updatedByAgent) {
+    this.updatedByAgent = updatedByAgent;
+  }
+
   public HashMap<String, String> getComment() {
     return comment;
   }
 
-  @Override
   public void setComment(HashMap<String, String> comment) {
     this.comment = comment;
   }
 
-  @Override
   public String getPopularName() {
     return popularName;
   }
 
-  @Override
   public void setPopularName(String popularName) {
     this.popularName = popularName;
   }
 
-  @Override
   public HashMap<String, String> getSource() {
     return source;
   }
 
-  @Override
   public void setSource(HashMap<String, String> source) {
     this.source = source;
   }

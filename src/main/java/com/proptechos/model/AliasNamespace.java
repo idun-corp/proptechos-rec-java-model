@@ -28,6 +28,12 @@ public class AliasNamespace implements IBaseClass {
   @JsonDeserialize(using = InstantDeserializer.class)
   private Instant updated;
 
+  @JsonProperty(value = "createdByAgent")
+  private String createdByAgent;
+
+  @JsonProperty(value = "updatedByAgent")
+  private String updatedByAgent;
+
   @JsonProperty("comment")
   private HashMap<String, String> comment;
 
@@ -73,6 +79,22 @@ public class AliasNamespace implements IBaseClass {
 
   public void setUpdated(Instant updated) {
     this.updated = updated;
+  }
+
+  public String getCreatedByAgent() {
+    return createdByAgent;
+  }
+
+  public void setCreatedByAgent(String createdByAgent) {
+    this.createdByAgent = createdByAgent;
+  }
+
+  public String getUpdatedByAgent() {
+    return updatedByAgent;
+  }
+
+  public void setUpdatedByAgent(String updatedByAgent) {
+    this.updatedByAgent = updatedByAgent;
   }
 
   public HashMap<String, String> getComment() {
