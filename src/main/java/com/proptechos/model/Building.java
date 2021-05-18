@@ -42,6 +42,12 @@ public class Building implements IForeignSystemObject, IRealEstateComponent {
   @JsonProperty("popularName")
   private String popularName;
 
+  @JsonProperty(value = "createdByAgent")
+  private String createdByAgent;
+
+  @JsonProperty(value = "updatedByAgent")
+  private String updatedByAgent;
+
   @JsonProperty("source")
   private HashMap<String, String> source;
 
@@ -113,6 +119,22 @@ public class Building implements IForeignSystemObject, IRealEstateComponent {
 
   public void setPopularName(String popularName) {
     this.popularName = popularName;
+  }
+
+  public String getCreatedByAgent() {
+    return createdByAgent;
+  }
+
+  public void setCreatedByAgent(String createdByAgent) {
+    this.createdByAgent = createdByAgent;
+  }
+
+  public String getUpdatedByAgent() {
+    return updatedByAgent;
+  }
+
+  public void setUpdatedByAgent(String updatedByAgent) {
+    this.updatedByAgent = updatedByAgent;
   }
 
   public HashMap<String, String> getSource() {

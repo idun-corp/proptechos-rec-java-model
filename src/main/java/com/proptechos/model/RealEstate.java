@@ -30,6 +30,12 @@ public class RealEstate  implements IForeignSystemObject, IRecClass {
   @JsonDeserialize(using = InstantDeserializer.class)
   private Instant updated;
 
+  @JsonProperty(value = "createdByAgent")
+  private String createdByAgent;
+
+  @JsonProperty(value = "updatedByAgent")
+  private String updatedByAgent;
+
   @JsonProperty("hasAlias")
   private List<Alias> hasAliases;
 
@@ -81,6 +87,22 @@ public class RealEstate  implements IForeignSystemObject, IRecClass {
 
   public void setUpdated(Instant updated) {
     this.updated = updated;
+  }
+
+  public String getCreatedByAgent() {
+    return createdByAgent;
+  }
+
+  public void setCreatedByAgent(String createdByAgent) {
+    this.createdByAgent = createdByAgent;
+  }
+
+  public String getUpdatedByAgent() {
+    return updatedByAgent;
+  }
+
+  public void setUpdatedByAgent(String updatedByAgent) {
+    this.updatedByAgent = updatedByAgent;
   }
 
   public List<Alias> getHasAliases() {

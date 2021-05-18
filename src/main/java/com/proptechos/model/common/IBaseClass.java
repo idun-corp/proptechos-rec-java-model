@@ -23,6 +23,14 @@ public interface IBaseClass {
 
   Instant getUpdated();
 
+  void setCreatedByAgent(String createdByAgent);
+
+  String getCreatedByAgent();
+
+  void setUpdatedByAgent(String updatedByAgent);
+
+  String getUpdatedByAgent();
+
   void setPopularName(String popularName);
 
   String getPopularName();
