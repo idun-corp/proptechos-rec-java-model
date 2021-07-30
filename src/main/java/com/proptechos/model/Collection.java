@@ -135,6 +135,14 @@ public class Collection implements IForeignSystemObject, IRecClass {
     this.littera = littera;
   }
 
+  public UUID getPropertyOwner() {
+    return propertyOwner;
+  }
+
+  public void setPropertyOwner(UUID propertyOwner) {
+    this.propertyOwner = propertyOwner;
+  }
+
   public List<Alias> getHasAliases() {
     return hasAliases;
   }
