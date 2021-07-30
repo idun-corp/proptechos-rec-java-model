@@ -43,6 +43,9 @@ public class Collection implements IForeignSystemObject, IRecClass {
   @JsonProperty("popularName")
   private String popularName;
 
+  @JsonProperty("propertyOwner")
+  private UUID propertyOwner;
+
   @JsonProperty("source")
   private HashMap<String, String> source;
 
