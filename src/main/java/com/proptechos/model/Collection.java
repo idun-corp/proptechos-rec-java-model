@@ -43,6 +43,9 @@ public class Collection implements IForeignSystemObject, IRecClass {
   @JsonProperty("popularName")
   private String popularName;
 
+  @JsonProperty("propertyOwner")
+  private UUID propertyOwner;
+
   @JsonProperty("source")
   private HashMap<String, String> source;
 
@@ -130,6 +133,14 @@ public class Collection implements IForeignSystemObject, IRecClass {
 
   public void setLittera(String littera) {
     this.littera = littera;
+  }
+
+  public UUID getPropertyOwner() {
+    return propertyOwner;
+  }
+
+  public void setPropertyOwner(UUID propertyOwner) {
+    this.propertyOwner = propertyOwner;
   }
 
   public List<Alias> getHasAliases() {
