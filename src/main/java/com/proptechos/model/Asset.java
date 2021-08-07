@@ -51,6 +51,9 @@ public class Asset implements IForeignSystemObject, IRecClass {
   @JsonProperty("locatedIn")
   private UUID locatedIn;
 
+  @JsonProperty("isLocatedAtLocalCoordinates")
+  private String isLocatedAtLocalCoordinates;
+
   @JsonProperty("hasAlias")
   private List<Alias> hasAliases;
 
@@ -140,6 +143,14 @@ public class Asset implements IForeignSystemObject, IRecClass {
 
   public void setLocatedIn(UUID locatedIn) {
     this.locatedIn = locatedIn;
+  }
+
+  public String getIsLocatedAtLocalCoordinates() {
+    return isLocatedAtLocalCoordinates;
+  }
+
+  public void setIsLocatedAtLocalCoordinates(String isLocatedAtLocalCoordinates) {
+    this.isLocatedAtLocalCoordinates = isLocatedAtLocalCoordinates;
   }
 
   public List<Alias> getHasAliases() {
