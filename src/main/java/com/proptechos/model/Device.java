@@ -33,6 +33,11 @@ public class Device implements IDevice {
   @JsonDeserialize(using = InstantDeserializer.class)
   private Instant updated;
 
+  @JsonProperty("startedTime")
+  @JsonSerialize(using = InstantSerializer.class)
+  @JsonDeserialize(using = InstantDeserializer.class)
+  private Instant startedTime;
+
   @JsonProperty(value = "createdByAgent")
   private String createdByAgent;
 
@@ -111,6 +116,14 @@ public class Device implements IDevice {
 
   public void setUpdated(Instant updated) {
     this.updated = updated;
+  }
+
+  public Instant getStartedTime() {
+    return startedTime;
+  }
+
+  public void setStartedTime(Instant startedTime) {
+    this.startedTime = startedTime;
   }
 
   public String getCreatedByAgent() {
