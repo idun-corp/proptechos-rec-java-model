@@ -86,6 +86,9 @@ public class Device implements IDevice {
   @JsonProperty("hostedBy")
   private UUID hostedBy;
 
+  @JsonProperty("isLocatedAtLocalCoordinates")
+  private String isLocatedAtLocalCoordinates;
+
   public UUID getId() {
     return id;
   }
@@ -252,5 +255,13 @@ public class Device implements IDevice {
 
   public void setHostedBy(UUID hostedBy) {
     this.hostedBy = hostedBy;
+  }
+
+  public String getIsLocatedAtLocalCoordinates() {
+    return isLocatedAtLocalCoordinates;
+  }
+
+  public void setIsLocatedAtLocalCoordinates(String isLocatedAtLocalCoordinates) {
+    this.isLocatedAtLocalCoordinates = isLocatedAtLocalCoordinates;
   }
 }
