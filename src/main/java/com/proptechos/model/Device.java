@@ -86,8 +86,8 @@ public class Device implements IDevice {
   @JsonProperty("hostedBy")
   private UUID hostedBy;
 
-  @JsonProperty("isLocatedAtLocalCoordinates")
-  private String isLocatedAtLocalCoordinates;
+  @JsonProperty("hasGeoReferenceOrigo")
+  private String geoReferenceOrigo;
 
   public UUID getId() {
     return id;
@@ -257,11 +257,11 @@ public class Device implements IDevice {
     this.hostedBy = hostedBy;
   }
 
-  public String getIsLocatedAtLocalCoordinates() {
-    return isLocatedAtLocalCoordinates;
+  public String getGeoReferenceOrigo() {
+    return geoReferenceOrigo;
   }
 
-  public void setIsLocatedAtLocalCoordinates(String isLocatedAtLocalCoordinates) {
-    this.isLocatedAtLocalCoordinates = isLocatedAtLocalCoordinates;
+  public void setGeoReferenceOrigo(String geoReferenceOrigo) {
+    this.geoReferenceOrigo = geoReferenceOrigo;
   }
 }
