@@ -47,6 +47,9 @@ public class Agent implements IBaseClass {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private boolean archived;
 
+    @JsonProperty("defaultPropertyOwner")
+    private UUID defaultPropertyOwner;
+
     @Override
     public String toString() {
         return "Agent{" +
@@ -150,5 +153,13 @@ public class Agent implements IBaseClass {
 
     public void setArchived(boolean archived) {
         this.archived = archived;
+    }
+
+    public UUID getDefaultPropertyOwner() {
+        return defaultPropertyOwner;
+    }
+
+    public void setDefaultPropertyOwner(UUID defaultPropertyOwner) {
+        this.defaultPropertyOwner = defaultPropertyOwner;
     }
 }
