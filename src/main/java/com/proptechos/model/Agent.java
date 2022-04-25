@@ -19,6 +19,9 @@ public class Agent implements IBaseClass {
     @JsonProperty("class")
     private String recClass;
 
+    @JsonProperty("status")
+    private TwinStatus twinStatus;
+
     @JsonProperty("createdTime")
     @JsonSerialize(using = InstantSerializer.class)
     @JsonDeserialize(using = InstantDeserializer.class)
@@ -57,92 +60,82 @@ public class Agent implements IBaseClass {
             '}';
     }
 
-    @Override
     public UUID getId() {
         return id;
     }
 
-    @Override
     public void setId(UUID id) {
         this.id = id;
     }
 
-    @Override
     public String getRecClass() {
         return recClass;
     }
 
-    @Override
     public void setRecClass(String recClass) {
         this.recClass = recClass;
     }
 
-    @Override
+    public TwinStatus getTwinStatus() {
+        return twinStatus;
+    }
+
+    public void setTwinStatus(TwinStatus twinStatus) {
+        this.twinStatus = twinStatus;
+    }
+
     public Instant getCreated() {
         return created;
     }
 
-    @Override
     public void setCreated(Instant created) {
         this.created = created;
     }
 
-    @Override
     public Instant getUpdated() {
         return updated;
     }
 
-    @Override
     public void setUpdated(Instant updated) {
         this.updated = updated;
     }
 
-    @Override
     public String getCreatedByAgent() {
         return createdByAgent;
     }
 
-    @Override
     public void setCreatedByAgent(String createdByAgent) {
         this.createdByAgent = createdByAgent;
     }
 
-    @Override
     public String getUpdatedByAgent() {
         return updatedByAgent;
     }
 
-    @Override
     public void setUpdatedByAgent(String updatedByAgent) {
         this.updatedByAgent = updatedByAgent;
     }
 
-    @Override
     public HashMap<String, String> getComment() {
         return comment;
     }
 
-    @Override
     public void setComment(HashMap<String, String> comment) {
         this.comment = comment;
     }
 
-    @Override
     public String getPopularName() {
         return popularName;
     }
 
-    @Override
     public void setPopularName(String popularName) {
         this.popularName = popularName;
     }
 
-    @Override
     public HashMap<String, String> getSource() {
         return source;
     }
 
-    @Override
     public void setSource(HashMap<String, String> source) {
         this.source = source;
     }

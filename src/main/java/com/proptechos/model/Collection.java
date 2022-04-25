@@ -21,6 +21,9 @@ public class Collection implements IForeignSystemObject, IRecClass {
   @JsonProperty("class")
   private String recClass;
 
+  @JsonProperty("status")
+  private TwinStatus twinStatus;
+
   @JsonProperty("createdTime")
   @JsonSerialize(using = InstantSerializer.class)
   @JsonDeserialize(using = InstantDeserializer.class)
@@ -69,6 +72,14 @@ public class Collection implements IForeignSystemObject, IRecClass {
 
   public void setRecClass(String recClass) {
     this.recClass = recClass;
+  }
+
+  public TwinStatus getTwinStatus() {
+    return twinStatus;
+  }
+
+  public void setTwinStatus(TwinStatus twinStatus) {
+    this.twinStatus = twinStatus;
   }
 
   public Instant getCreated() {

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.proptechos.model.Alias;
+import com.proptechos.model.TwinStatus;
 import com.proptechos.model.common.IBuildingComponent;
 import com.proptechos.util.InstantDeserializer;
 import com.proptechos.util.InstantSerializer;
@@ -22,6 +23,9 @@ public class BuildingComponent implements IBuildingComponent {
   @JsonInclude(Include.NON_NULL)
   @JsonProperty("class")
   private String recClass;
+
+  @JsonProperty("status")
+  private TwinStatus twinStatus;
 
   @JsonProperty("createdTime")
   @JsonSerialize(using = InstantSerializer.class)
@@ -80,6 +84,14 @@ public class BuildingComponent implements IBuildingComponent {
 
   public void setRecClass(String recClass) {
     this.recClass = recClass;
+  }
+
+  public TwinStatus getTwinStatus() {
+    return twinStatus;
+  }
+
+  public void setTwinStatus(TwinStatus twinStatus) {
+    this.twinStatus = twinStatus;
   }
 
   public Instant getCreated() {

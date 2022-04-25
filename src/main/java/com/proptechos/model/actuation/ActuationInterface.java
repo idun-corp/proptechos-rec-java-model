@@ -3,6 +3,7 @@ package com.proptechos.model.actuation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.proptechos.model.TwinStatus;
 import com.proptechos.model.common.IRecClass;
 import com.proptechos.util.InstantDeserializer;
 import com.proptechos.util.InstantSerializer;
@@ -17,6 +18,9 @@ public class ActuationInterface implements IRecClass {
 
   @JsonProperty("class")
   private String recClass;
+
+  @JsonProperty("status")
+  private TwinStatus twinStatus;
 
   @JsonProperty("createdTime")
   @JsonSerialize(using = InstantSerializer.class)
@@ -64,6 +68,14 @@ public class ActuationInterface implements IRecClass {
 
   public void setRecClass(String recClass) {
     this.recClass = recClass;
+  }
+
+  public TwinStatus getTwinStatus() {
+    return twinStatus;
+  }
+
+  public void setTwinStatus(TwinStatus twinStatus) {
+    this.twinStatus = twinStatus;
   }
 
   public Instant getCreated() {

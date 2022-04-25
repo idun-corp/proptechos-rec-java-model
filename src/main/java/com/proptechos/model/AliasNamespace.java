@@ -18,6 +18,9 @@ public class AliasNamespace implements IBaseClass {
   @JsonProperty("class")
   private String recClass;
 
+  @JsonProperty("status")
+  private TwinStatus twinStatus;
+
   @JsonProperty("createdTime")
   @JsonSerialize(using = InstantSerializer.class)
   @JsonDeserialize(using = InstantDeserializer.class)
@@ -63,6 +66,14 @@ public class AliasNamespace implements IBaseClass {
 
   public void setRecClass(String recClass) {
     this.recClass = recClass;
+  }
+
+  public TwinStatus getTwinStatus() {
+    return twinStatus;
+  }
+
+  public void setTwinStatus(TwinStatus twinStatus) {
+    this.twinStatus = twinStatus;
   }
 
   public Instant getCreated() {
