@@ -1,5 +1,7 @@
 package com.proptechos.model.common;
 
+import com.proptechos.model.TwinStatus;
+
 import java.time.Instant;
 import java.util.Date;
 import java.util.HashMap;
@@ -14,6 +16,10 @@ public interface IBaseClass {
   void setRecClass(String recClass);
 
   String getRecClass();
+
+  TwinStatus getTwinStatus();
+
+  void setTwinStatus(TwinStatus twinStatus);
 
   void setCreated(Instant created);
 

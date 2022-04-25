@@ -20,6 +20,9 @@ public class Asset implements IForeignSystemObject, IRecClass {
   @JsonProperty("class")
   private String recClass;
 
+  @JsonProperty("status")
+  private TwinStatus twinStatus;
+
   @JsonProperty("littera")
   private String littera;
 
@@ -71,6 +74,14 @@ public class Asset implements IForeignSystemObject, IRecClass {
 
   public void setRecClass(String recClass) {
     this.recClass = recClass;
+  }
+
+  public TwinStatus getTwinStatus() {
+    return twinStatus;
+  }
+
+  public void setTwinStatus(TwinStatus twinStatus) {
+    this.twinStatus = twinStatus;
   }
 
   public String getLittera() {
