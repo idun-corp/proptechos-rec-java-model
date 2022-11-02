@@ -3,6 +3,7 @@ package com.proptechos.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.proptechos.model.common.IAsset;
 import com.proptechos.model.common.IForeignSystemObject;
 import com.proptechos.model.common.IRecClass;
 import com.proptechos.util.InstantDeserializer;
@@ -12,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
-public class Asset implements IForeignSystemObject, IRecClass {
+public class Asset implements IAsset {
 
   @JsonProperty("id")
   private UUID id;
