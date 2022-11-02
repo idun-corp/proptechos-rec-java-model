@@ -1,15 +1,29 @@
 package com.proptechos.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.proptechos.model.common.IForeignSystemObject;
-import com.proptechos.model.common.IRealEstateComponent;
-import com.proptechos.util.InstantDeserializer;
-import com.proptechos.util.InstantSerializer;
-import java.time.Instant;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import com.proptechos.model.building.Address;
+import com.proptechos.model.building.AreaQuantity;
 
-public class Building extends RealEstateComponent { }
+import java.util.List;
+
+public class Building extends RealEstateComponent {
+
+    private List<Address> addresses;
+
+    private List<AreaQuantity> areaQuantities;
+
+    public List<Address> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(List<Address> addresses) {
+        this.addresses = addresses;
+    }
+
+    public List<AreaQuantity> getAreaQuantities() {
+        return areaQuantities;
+    }
+
+    public void setAreaQuantities(List<AreaQuantity> areaQuantities) {
+        this.areaQuantities = areaQuantities;
+    }
+}
