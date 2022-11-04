@@ -24,24 +24,24 @@ public class Address {
 
     public static class Details {
 
-        private String street;
+        private String streetAddress;
 
         private String postalCode;
 
         private String city;
 
-        private String country;
+        private String countryName;
 
         private String locality;
 
         private String region;
 
-        public String getStreet() {
-            return street;
+        public String getStreetAddress() {
+            return streetAddress;
         }
 
-        public void setStreet(String street) {
-            this.street = street;
+        public void setStreetAddress(String streetAddress) {
+            this.streetAddress = streetAddress;
         }
 
         public String getPostalCode() {
@@ -60,12 +60,12 @@ public class Address {
             this.city = city;
         }
 
-        public String getCountry() {
-            return country;
+        public String getCountryName() {
+            return countryName;
         }
 
-        public void setCountry(String country) {
-            this.country = country;
+        public void setCountryName(String countryName) {
+            this.countryName = countryName;
         }
 
         public String getLocality() {
