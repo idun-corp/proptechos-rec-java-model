@@ -60,6 +60,9 @@ public class Asset implements IForeignSystemObject, IRecClass {
   @JsonProperty("hasAlias")
   private List<Alias> hasAliases;
 
+  @JsonProperty("hasGeoReferenceOrigo")
+  private String geoReferenceOrigo;
+
   public UUID getId() {
     return id;
   }
@@ -172,4 +175,11 @@ public class Asset implements IForeignSystemObject, IRecClass {
     this.hasAliases = hasAliases;
   }
 
+  public String getGeoReferenceOrigo() {
+    return geoReferenceOrigo;
+  }
+
+  public void setGeoReferenceOrigo(String geoReferenceOrigo) {
+    this.geoReferenceOrigo = geoReferenceOrigo;
+  }
 }
