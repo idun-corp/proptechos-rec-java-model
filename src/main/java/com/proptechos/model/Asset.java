@@ -61,6 +61,9 @@ public class Asset implements IAsset {
   @JsonProperty("hasAlias")
   private List<Alias> hasAliases;
 
+  @JsonProperty("hasGeoReferenceOrigo")
+  private String geoReferenceOrigo;
+
   public UUID getId() {
     return id;
   }
@@ -173,4 +176,11 @@ public class Asset implements IAsset {
     this.hasAliases = hasAliases;
   }
 
+  public String getGeoReferenceOrigo() {
+    return geoReferenceOrigo;
+  }
+
+  public void setGeoReferenceOrigo(String geoReferenceOrigo) {
+    this.geoReferenceOrigo = geoReferenceOrigo;
+  }
 }
