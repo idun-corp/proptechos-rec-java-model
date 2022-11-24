@@ -69,10 +69,10 @@ public class Device implements IDevice {
   private UUID isMountedInBuildingComponent;
 
   @JsonProperty("servesBuildingComponent")
-  private UUID servesBuildingComponent;
+  private List<UUID> servesBuildingComponent;
 
   @JsonProperty("servesBuilding")
-  private UUID servesBuilding;
+  private List<UUID> servesBuilding;
 
   @JsonProperty("hasSuperDevice")
   private UUID hasSuperDevice;
@@ -81,10 +81,10 @@ public class Device implements IDevice {
   private List<UUID> hasSubDevices;
 
   @JsonProperty("servedBy")
-  private UUID servedBy;
+  private List<UUID> servedBy;
 
   @JsonProperty("servesDevice")
-  private UUID servesDevice;
+  private List<UUID> servesDevice;
 
   @JsonProperty("hostedBy")
   private UUID hostedBy;
@@ -212,19 +212,19 @@ public class Device implements IDevice {
     this.isMountedInBuildingComponent = isMountedInBuildingComponent;
   }
 
-  public UUID getServesBuildingComponent() {
+  public List<UUID> getServesBuildingComponent() {
     return servesBuildingComponent;
   }
 
-  public void setServesBuildingComponent(UUID servesBuildingComponent) {
+  public void setServesBuildingComponent(List<UUID> servesBuildingComponent) {
     this.servesBuildingComponent = servesBuildingComponent;
   }
 
-  public UUID getServesBuilding() {
+  public List<UUID> getServesBuilding() {
     return servesBuilding;
   }
 
-  public void setServesBuilding(UUID servesBuilding) {
+  public void setServesBuilding(List<UUID> servesBuilding) {
     this.servesBuilding = servesBuilding;
   }
 
@@ -244,19 +244,19 @@ public class Device implements IDevice {
     this.hasSubDevices = hasSubDevices;
   }
 
-  public UUID getServedBy() {
+  public List<UUID> getServedBy() {
     return servedBy;
   }
 
-  public void setServedBy(UUID servedBy) {
+  public void setServedBy(List<UUID> servedBy) {
     this.servedBy = servedBy;
   }
 
-  public UUID getServesDevice() {
+  public List<UUID> getServesDevice() {
     return servesDevice;
   }
 
-  public void setServesDevice(UUID servesDevice) {
+  public void setServesDevice(List<UUID> servesDevice) {
     this.servesDevice = servesDevice;
   }
 
