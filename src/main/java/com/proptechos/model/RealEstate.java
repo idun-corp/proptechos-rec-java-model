@@ -3,7 +3,6 @@ package com.proptechos.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.proptechos.model.building.Address;
 import com.proptechos.model.common.IForeignSystemObject;
 import com.proptechos.model.common.IRecClass;
 import com.proptechos.util.InstantDeserializer;
@@ -61,7 +60,7 @@ public class RealEstate  implements IForeignSystemObject, IRecClass {
   @JsonProperty("hasGeoReferenceOrigo")
   private String geoReferenceOrigo;
 
-  private List<Address> addresses;
+  private List<UUID> addresses;
 
   public UUID getId() {
     return id;
@@ -175,11 +174,11 @@ public class RealEstate  implements IForeignSystemObject, IRecClass {
     this.geoReferenceOrigo = geoReferenceOrigo;
   }
 
-  public List<Address> getAddresses() {
+  public List<UUID> getAddresses() {
     return addresses;
   }
 
-  public void setAddresses(List<Address> addresses) {
+  public void setAddresses(List<UUID> addresses) {
     this.addresses = addresses;
   }
 }

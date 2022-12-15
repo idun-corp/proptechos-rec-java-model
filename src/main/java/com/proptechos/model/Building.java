@@ -1,21 +1,21 @@
 package com.proptechos.model;
 
-import com.proptechos.model.building.Address;
 import com.proptechos.model.building.AreaQuantity;
 
 import java.util.List;
+import java.util.UUID;
 
 public class Building extends RealEstateComponent {
 
-    private List<Address> addresses;
+    private List<UUID> addresses;
 
     private List<AreaQuantity> areaQuantities;
 
-    public List<Address> getAddresses() {
+    public List<UUID> getAddresses() {
         return addresses;
     }
 
-    public void setAddresses(List<Address> addresses) {
+    public void setAddresses(List<UUID> addresses) {
         this.addresses = addresses;
     }
 
