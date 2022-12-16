@@ -4,8 +4,6 @@ public class Address {
 
     private String type;
 
-    private Details address;
-
     public String getType() {
         return type;
     }
@@ -14,74 +12,63 @@ public class Address {
         this.type = type;
     }
 
-    public Details getAddress() {
-        return address;
+    private String streetAddress;
+
+    private String postalCode;
+
+    private String city;
+
+    private String countryName;
+
+    private String locality;
+
+    private String region;
+
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
-    public void setAddress(Details address) {
-        this.address = address;
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
     }
 
-    public static class Details {
+    public String getPostalCode() {
+        return postalCode;
+    }
 
-        private String streetAddress;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
 
-        private String postalCode;
+    public String getCity() {
+        return city;
+    }
 
-        private String city;
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-        private String countryName;
+    public String getCountryName() {
+        return countryName;
+    }
 
-        private String locality;
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
 
-        private String region;
+    public String getLocality() {
+        return locality;
+    }
 
-        public String getStreetAddress() {
-            return streetAddress;
-        }
+    public void setLocality(String locality) {
+        this.locality = locality;
+    }
 
-        public void setStreetAddress(String streetAddress) {
-            this.streetAddress = streetAddress;
-        }
+    public String getRegion() {
+        return region;
+    }
 
-        public String getPostalCode() {
-            return postalCode;
-        }
-
-        public void setPostalCode(String postalCode) {
-            this.postalCode = postalCode;
-        }
-
-        public String getCity() {
-            return city;
-        }
-
-        public void setCity(String city) {
-            this.city = city;
-        }
-
-        public String getCountryName() {
-            return countryName;
-        }
-
-        public void setCountryName(String countryName) {
-            this.countryName = countryName;
-        }
-
-        public String getLocality() {
-            return locality;
-        }
-
-        public void setLocality(String locality) {
-            this.locality = locality;
-        }
-
-        public String getRegion() {
-            return region;
-        }
-
-        public void setRegion(String region) {
-            this.region = region;
-        }
+    public void setRegion(String region) {
+        this.region = region;
     }
 }
