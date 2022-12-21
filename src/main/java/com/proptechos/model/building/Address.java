@@ -66,9 +66,6 @@ public class Address implements IRecClass, IForeignSystemObject {
     @JsonProperty("postalCode")
     private String postalCode;
 
-    @JsonProperty("city")
-    private String city;
-
     @JsonProperty("countryName")
     private String countryName;
 
@@ -92,14 +89,6 @@ public class Address implements IRecClass, IForeignSystemObject {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 
     public String getCountryName() {
